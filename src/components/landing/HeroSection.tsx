@@ -1,4 +1,6 @@
+
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
@@ -13,10 +15,12 @@ export function HeroSection() {
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto md:mx-0">
             Discover the future of web applications. Landing Spark provides innovative solutions to elevate your online presence and engagement.
           </p>
-          <Button size="lg" className="group">
-            Get Started Free
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Link href="/welcome" passHref>
+            <Button size="lg" className="group">
+              Get Started Free
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
         <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
           <Image
